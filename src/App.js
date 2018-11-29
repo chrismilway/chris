@@ -1,28 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Fetch from './Fetch';
+import SkillList from './SkillList';
+import JobList from './JobList';
 
-class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Fetch sheet={'skills'} end={"C"} render={data => <SkillList skills={data} />} />
+        <Fetch sheet={'jobs'} end={"F"} render={data => <JobList jobs={data} />} />
       </div>
     );
   }
 }
-
-export default App;
