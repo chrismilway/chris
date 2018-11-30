@@ -1,0 +1,13 @@
+.bar {
+	min-width: 10rem;
+	background-color: #ddd;
+	height: .75rem;
+	border-radius: .375rem;
+	overflow: hidden;
+}
+
+.bar__inner {
+	background-color: #888;
+	height: 100%;
+	border-radius: .375rem;
+}

@@ -5,5 +5,5 @@ export default function ResponsibilitiesList({ responsibilities }) {
 	const items = responsibilities.map(res => (
 		<li key={res.id}>{res.text}</li>
 	));
-	return <ul>{items}</ul>
+	return <ul class="u-unmargin">{items}</ul>
 }
